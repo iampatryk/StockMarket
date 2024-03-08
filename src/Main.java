@@ -55,13 +55,13 @@ public class Main {
         System.out.println("Market Cap of: " + tick + " on " + dat + " is: " + marketCapForDay + "\n");
 
 
-        System.out.println("GET AMOUNT OF STOCK IN CIRCULATION");
+        System.out.println("GET AMOUNT OF STOCK IN CIRCULATION ");
         // Uzyje String i date z tych wyzej
 
         int totalAmountOfStock = marketStock.getAmountOfStockInCirculation(tick,dat);
         System.out.println("Amount of " + tick + " on " + dat + " is: " + totalAmountOfStock + "\n");
 
-        System.out.println("GET TOTAL AMOUNT OF MARKET CAP");
+        System.out.println("GET TOTAL AMOUNT OF MARKET CAP ");
         // uzyje tej samej daty
         double totalMarketCap = marketStock.getTotalMarketCap(dat);
         System.out.println("Total market cap on " + dat + " is : " + totalMarketCap + "\n");
