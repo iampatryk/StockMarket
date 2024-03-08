@@ -51,7 +51,7 @@ public class MarketStock {
                totalMarketCap += stock.getValue() * stock.getAmountInCirculation();
            }
         }else {
-           System.out.println("Entry correct date.");
+           System.out.println("Entry correct date. ");
        }
        return totalMarketCap;
     }
