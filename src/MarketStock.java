@@ -4,6 +4,7 @@ import java.util.Date;
 public class MarketStock {
     private Map<Date, Set<Stock>> stocksMap = new HashMap<>();
 
+
    public double getMarketCapOfStockForDay(String ticker, Date date) {
 
        double marketCapForDay = 0;
@@ -92,7 +93,6 @@ public class MarketStock {
            }
        }
     }
-
 
 }
 

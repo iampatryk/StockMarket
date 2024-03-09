@@ -46,27 +46,26 @@ public class Main {
         marketStock.addStockToDay(stock14,date3);
         marketStock.addStockToDay(stock15,date3);
 
-//        System.out.println("GET MARKETCAP OF STOCK FOR DAY");
-//
-//        String tick = "TES";
-//        Date dat = new Date(2023,1,1);
-//
-//        double marketCapForDay = marketStock.getMarketCapOfStockForDay(tick,dat);
-//        System.out.println("Market Cap of: " + tick + " on " + dat + " is: " + marketCapForDay + "\n");
-//
-//
-//        System.out.println("GET AMOUNT OF STOCK IN CIRCULATION ");
-//        // Uzyje String i date z tych wyzej
-//
-//        int totalAmountOfStock = marketStock.getAmountOfStockInCirculation(tick,dat);
-//        System.out.println("Amount of " + tick + " on " + dat + " is: " + totalAmountOfStock + "\n");
-//
-//        System.out.println("GET TOTAL AMOUNT OF MARKET CAP ");
-//        // uzyje tej samej daty
-//        double totalMarketCap = marketStock.getTotalMarketCap(dat);
-//        System.out.println("Total market cap on " + dat + " is : " + totalMarketCap + "\n");
 
-        marketStock.getTickerFromUserAndPrint();
+        String tick = "TES";
+        Date dat = new Date(2023,1,1);
+
+        System.out.println("GET MARKETCAP OF STOCK FOR DAY");
+        double marketCapForDay = marketStock.getMarketCapOfStockForDay(tick,dat);
+        System.out.println("Market Cap of: " + tick + " on " + dat + " is: " + marketCapForDay + "\n");
+
+
+        System.out.println("GET AMOUNT OF STOCK IN CIRCULATION ");
+        // Uzyje String i date z tych wyzej
+        int totalAmountOfStock = marketStock.getAmountOfStockInCirculation(tick,dat);
+        System.out.println("Amount of " + tick + " on " + dat + " is: " + totalAmountOfStock + "\n");
+
+        System.out.println("GET TOTAL AMOUNT OF MARKET CAP ");
+        // uzyje tej samej daty
+        double totalMarketCap = marketStock.getTotalMarketCap(dat);
+        System.out.println("Total market cap on " + dat + " is : " + totalMarketCap + "\n");
+
+//        marketStock.getTickerFromUserAndPrint();
 
     }
 }
