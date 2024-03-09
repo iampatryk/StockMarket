@@ -67,6 +67,33 @@ public class MarketStock {
             stocksMap.get(date).add(stock);
         }
     }
+
+    public void getTickerFromUserAndPrint() {
+        Scanner sc = new Scanner(System.in);
+        boolean wrongTicker = false;
+
+       while (true) {
+           System.out.println("Enter your ticker or 'end' to close ");
+
+           String enteredTicker = sc.nextLine();
+           if(enteredTicker.equalsIgnoreCase("end")) {
+               break;
+           }
+           // Iteruj po wszystkich wpisach w mapie
+           for(Map.Entry<Date,Set<Stock>> entry : stocksMap.entrySet()) {
+               Date date = entry.getKey();
+               Set<Stock> stockSet = entry.getValue();
+               // Iteruj po wszystkich akcjach w danym dniu
+               for(Stock stock : stockSet) {
+                   if(stock.getTicker().equalsIgnoreCase(enteredTicker)) {
+                       System.out.println("Ticker: " + stock.getTicker() + "\n" + "Price: " + stock.getValue() + "\n"  + "Amont in Circulation: " + stock.getAmountInCirculation() + "\n"  + "Date: " + date);
+                   }
+               }
+           }
+       }
+    }
+
+
 }
 
 
@@ -74,6 +101,8 @@ public class MarketStock {
 Ogolnie zadanie sprawilo duzo trudnosci ze zrozumieniem . Ale powoli powoli cos z tego wykrzesalem .
 Pytania :
     jak zmienic format daty na bardziej czytelny ?
+    ak zrobic zeby irzutkownik mogl wprowadzic male litery to sie udalo trzeba zmienic equals na equalsIgnoreCase
+
 
 
  */
